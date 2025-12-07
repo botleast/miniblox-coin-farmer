@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Miniblox Coin Farmer",
+  "version": "1.0",
+  "description": "Auto-farms rewarded coins with a UI toggle",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "icons": {"128": "icon.png"},
+  "host_permissions": [
+    "https://miniblox.io/*",
+    "https://session.coolmathblox.ca/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://miniblox.io/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
