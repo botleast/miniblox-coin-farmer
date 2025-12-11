@@ -124,7 +124,7 @@ async function updateCoins() {
 function startLoop() {
     if (farming) return;
     farming = true;
-    intervalId = setInterval(sendRewardedAd, 5800);
+    intervalId = setInterval(sendRewardedAd, 11000);
     sendRewardedAd();
     updateCoins();
 }
@@ -146,4 +146,5 @@ document.addEventListener("keydown", (e) => {
 });
 
 updateCoins();
+
 setInterval(updateCoins, 1000);
